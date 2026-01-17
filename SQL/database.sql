@@ -222,3 +222,22 @@ set stok = stok -1
 where kode_barang = 'BR001';
 
 commit;
+
+-- sub query
+select nama_barang, harga_barang
+from barang
+where harga_barang > (
+select avg(harga_barang) from barang
+);
+ -- view
+ create view view_transaksi as 
+ select 
+ transaksi.no_transaksi,
+ kasir.nama_kasir,
+ barang.nama_barang,
+ detail_transaksi.jumlah_barang,
+ detail_transaksi.total_tagihan
+ from detail_transaksi
+ join transaksi on detail_transaksi.id_transaksi = transaksi.id_transaksi	
+ join kasir on transaksi.id_kasir = kasir.id_kasir
+ join barang on detail_transaksi.kode_barang = barang.kode_barang;
