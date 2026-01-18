@@ -208,7 +208,7 @@ from barang
 right join supplier
 on barang.id_supplier = supplier.id_supplier;
 
--- TCL : Transaksi Penjualan
+-- TCL : Simulasi Transaksi Penjualan Dengan COMMIT
 start transaction;
 
 insert into transaksi values
@@ -222,6 +222,21 @@ set stok = stok -1
 where kode_barang = 'BR001';
 
 commit;
+
+-- TCL : Simulasi Penjualan Dengan ROLLBACK
+start transaction;
+
+insert into transaksi values
+('TR009','175-19/10/2025','KSR002',1,5900,14100);
+
+insert into detail_transaksi values
+('DT009','TR009','BR003',1,5900,5900);
+
+update barang
+set stok = stok -1
+where kode_barang = 'BR003';
+
+ROLLBACK;
 
 -- sub query
 select nama_barang, harga_barang
