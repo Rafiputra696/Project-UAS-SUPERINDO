@@ -39,10 +39,10 @@ Database ini terdiri dari beberapa tabel utama
 5. Detail Transaksi
 
 ## Struktur Repository
-- SQL  
+1.SQL  
   Berisi file script SQL (`database.sql`) yang digunakan untuk
   pembuatan tabel, relasi, dan pengolahan data.
-- dokumen  
+2.dokumen  
   Berisi laporan dan poster Project UAS.
 
 ## Cara Menjalankan Database
