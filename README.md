@@ -39,12 +39,11 @@ Database ini terdiri dari beberapa tabel utama
 5. Detail Transaksi
 
 ## Struktur Repository
-1.SQL  
+1. SQL
   Berisi file script SQL (`database.sql`) yang digunakan untuk
   pembuatan tabel, relasi, dan pengolahan data.
-2.dokumen  
+2. dokumen  
   Berisi laporan dan poster Project UAS.
-
 ## Cara Menjalankan Database
 1. Jalankan aplikasi XAMPP
 2. Aktifkan service MySQL
